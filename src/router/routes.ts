@@ -7,33 +7,6 @@ export default () => {
       component: () => import('../layout/Main.vue'),
       children: [
         {
-          path: '/auth',
-          name: 'auth',
-          meta: {
-            requiresAuth: false
-          },
-          component: () => import('../screens/login/Index.vue'),
-          redirect: { path: '/auth/start' },
-          children: [
-            {
-              path: '/start',
-              name: 'start',
-              meta: {
-                requiresAuth: false
-              },
-              component: () => import('../screens/login/Start.vue'),
-            },
-            {
-              path: '/login',
-              name: 'login',
-              meta: {
-                requiresAuth: false
-              },
-              component: () => import('../screens/login/Login.vue'),
-            }
-          ]
-        },
-        {
           path: '/index',
           name: 'index',
           meta: {
