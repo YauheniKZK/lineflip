@@ -24,11 +24,11 @@ import { ref, reactive, onMounted, watch } from 'vue'
 // 1) Параметры канваса и земли
 const WIDTH   = 400
 const HEIGHT  = 600
-const GROUND_H = ref(300)
+const GROUND_H = ref(450)
 
 // 2) Параметры линии
 const THICKNESS   = 10
-const MOVING_LEN  = 80
+const MOVING_LEN  = 40
 const H_SPEED     = 3
 const V_SPEED     = 5
 
@@ -43,8 +43,10 @@ interface HoleConfig {
 // пример массива дырок — можно подставить любой
 const holesConfig = ref<HoleConfig[]>([
   { type: 'down',  startX: 50, startY: 0,  width: 20, length: 100 },
-  { type: 'left',  startX: 430, startY: 100, width: 100, length: 500 },
-  { type: 'down',  startX: 150, startY: 150,  width: 20, length: 300 },
+  { type: 'left',  startX: 430, startY: 100, width: 60, length: 500 },
+  { type: 'down',  startX: 150, startY: 150,  width: 20, length: 150 },
+  { type: 'left',  startX: 250, startY: 300, width: 80, length: 500 },
+  { type: 'down',  startX: 50, startY: 350,  width: 20, length: 150 },
 ]);
 
 
@@ -58,7 +60,9 @@ const clickActions = ref<ClickAction[]>([
   { flipTo:'horizontal', autoBounce:true },  // 1. качаемся с отскоком
   { flipTo:'vertical' },                     // 2. падаем
   { flipTo:'vertical', direction:'right' },  // 3. встаём вертикально и дрейф вправо
-  { flipTo:'vertical' }                      // 4. падаем
+  { flipTo:'vertical' },                      // 4. падаем
+  { flipTo:'vertical', direction:'left' },
+  { flipTo:'vertical' },  
 ])
 
 // 5) Состояние игры
