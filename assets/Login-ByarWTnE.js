@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{b as e,o as c}from"./index-BHyPXFXs.js";const r={},t={class:"flex flex-col grow w-full"};function s(n,_){return c(),e("div",t)}const a=o(r,[["render",s]]);export{a as default};
