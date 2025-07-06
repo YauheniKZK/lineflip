@@ -5,6 +5,7 @@ import { fileURLToPath, resolve } from 'url';
 import packageJson from './package.json';
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/lineflip/',
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
