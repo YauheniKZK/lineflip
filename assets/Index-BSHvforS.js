@@ -1,1 +1,0 @@
-import{d as c,c as r,a as s,u as _,R as p,o as d}from"./index-Dga1TBU2.js";const u=c({__name:"Index",setup(e){return(o,t)=>(d(),r("div",null,[s(_(p))]))}}),f=(e,o)=>{const t=e.__vccOpts||e;for(const[a,n]of o)t[a]=n;return t},m=f(u,[["__scopeId","data-v-76ab55ae"]]);export{m as default};
