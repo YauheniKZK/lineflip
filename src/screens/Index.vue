@@ -5,11 +5,12 @@ import { RouterView, useRouter } from 'vue-router';
 
 <template>
   <div>
-    <router-view v-slot="{ Component, route }" class="flex flex-col grow">
+    <!-- <router-view v-slot="{ Component, route }" class="flex flex-col grow">
       <transition :name="String(route?.meta?.transition) || ''">
         <component :is="Component" />
       </transition>
-    </router-view>
+    </router-view> -->
+    <RouterView />
   </div>
 </template>
 
