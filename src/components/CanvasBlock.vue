@@ -21,6 +21,10 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted, watch } from 'vue'
 
+const LINE_COLOR  = ref('#DED3C4')  // цвет линии
+const GROUND_COLOR = ref('#555879') // цвет земли
+
+
 // 1) Параметры канваса и земли
 const WIDTH   = 400
 const HEIGHT  = 600
@@ -322,7 +326,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT)
 
   // Земля
-  ctx.fillStyle = '#654321'
+  ctx.fillStyle = GROUND_COLOR.value
   ctx.fillRect(0, HEIGHT - GROUND_H.value, WIDTH, GROUND_H.value)
 
   // Вырезаем дырки
@@ -341,7 +345,7 @@ function draw() {
   // Линия
   ctx.save()
   ctx.translate(state.x, state.y)
-  ctx.fillStyle = '#f00'
+  ctx.fillStyle = LINE_COLOR.value
   if (state.phase === 'horizontal' || state.phase === 'idle') {
     ctx.fillRect(0, 0, MOVING_LEN, THICKNESS)
   } else {
