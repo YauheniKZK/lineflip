@@ -46,11 +46,13 @@ interface HoleConfig {
 }
 // пример массива дырок — можно подставить любой
 const holesConfig = ref<HoleConfig[]>([
-  { type: 'down',  startX: 50, startY: 0,  width: 20, length: 100 },
-  { type: 'left',  startX: 430, startY: 100, width: 60, length: 500 },
-  { type: 'down',  startX: 150, startY: 150,  width: 20, length: 150 },
-  { type: 'left',  startX: 250, startY: 300, width: 80, length: 500 },
-  { type: 'down',  startX: 50, startY: 350,  width: 20, length: 150 },
+  { type: 'down',  startX: 50, startY: 0,  width: 15, length: 80 },
+  { type: 'left',  startX: 430, startY: 80, width: 60, length: 500 },
+  { type: 'down',  startX: 150, startY: 130,  width: 15, length: 100 },
+  { type: 'left',  startX: 250, startY: 200, width: 80, length: 500 },
+  { type: 'down',  startX: 50, startY: 280,  width: 15, length: 40 },
+  { type: 'left',  startX: 350, startY: 320, width: 80, length: 300 },
+  { type: 'down',  startX: 320, startY: 400,  width: 15, length: 60 },
 ]);
 
 
