@@ -68,7 +68,9 @@ const clickActions = ref<ClickAction[]>([
   { flipTo:'vertical', direction:'right' },  // 3. встаём вертикально и дрейф вправо
   { flipTo:'vertical' },                      // 4. падаем
   { flipTo:'vertical', direction:'left' },
-  { flipTo:'vertical' },  
+  { flipTo:'vertical' },
+  { flipTo:'vertical', direction:'right' },
+  { flipTo:'vertical' },
 ])
 
 // 5) Состояние игры
